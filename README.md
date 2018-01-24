@@ -6,4 +6,4 @@ Python script to check and notify before Linux user password expires.
 
 
 # Sample
-![Screenshot](screenshot.jpg)
+![Screenshot](screenshot.JPG)
