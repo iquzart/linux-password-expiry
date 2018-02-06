@@ -2,8 +2,9 @@
 <tbody>
 <tr>
 <td  style="border-top: none;  border-right: none; border-left: none; border-image: initial; border-bottom: 1pt solid #e7e4df; padding: 1.5pt 0in 1.5pt 15pt; width: 336px;">
-<p class="MsoNormal" style="text-align: left;"><strong><span style="font-size: 15.0pt; font-family: 'Tahoma',sans-serif; color: #336699;">Hostname: {{ machine }}</span></strong></p>
+<p class="MsoNormal" style="text-align: left;"><strong><span style="font-size: 15.0pt; font-family: 'Tahoma',sans-serif; color: #336699;">{{ header }}</span></strong></p>
 </td>
+
 <td style="width: 454px; align: center; border-top: none; border-right: none; border-left: none; border-image: initial; border-bottom: 1pt solid #e7e4df; padding: 1.5pt 7.5pt 1.5pt 0in;">
 <p class="MsoNormal" style="text-align: right;" align="right"><span style="font-size: 9.0pt; font-family: 'Arial',sans-serif; color: #666666;"><img id="_x0000_i1199" src="{{logo}}" /></span></p>
 </td>
@@ -22,7 +23,10 @@
 </tr>
 <tr>
 <td style="padding: 7.5pt 0in 0in 0in;">
-<p><span style="font-size: 10.0pt; text-align:center; font-family: 'Verdana',sans-serif; color: #666666;"> &nbsp;{{ data }}</span></p>
+<p><span style="font-size: 10.0pt; text-align:center; font-family: 'Verdana',sans-serif; color: #666666;">{{ data }}</span></p>
+<p class="MsoNormal" style="text-align: left;"><strong><span style="font-size: 10.0pt; font-family: 'Tahoma',sans-serif; color: #666666;">Host Name:  {{ machine }}<br>Account Name: {{ username }}<br>Expiry Date: {{date}}</span></strong></p>
+</td>
+
 </td>
 </tr>
 <tr style="height: 3.5pt;">
@@ -31,7 +35,7 @@
 <tr>
 <td style="padding: 15.0pt 0in 0in 0in;">
 <p><span style="font-size: 10.0pt; font-family: 'Verdana',sans-serif; color: #666666;">Regards,</span></p>
-<p><span style="font-size: 10.0pt; font-family: 'Verdana',sans-serif; color: #666666;"> Name </span></p>
+<p><span style="font-size: 10.0pt; font-family: 'Verdana',sans-serif; color: #666666;"> The Meraas IT Infrastructure Team</span></p>
 </td>
 </tr>
 </tbody>
@@ -48,3 +52,4 @@
 </tr>
 </tbody>
 </table>
+<p class="MsoNormal">&nbsp;</p>
