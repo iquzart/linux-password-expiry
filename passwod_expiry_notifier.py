@@ -3,7 +3,7 @@
 # Pupose        :- Notify on Email befor password expires - Linux, unix, BSD etc
 # Author        :- Muhammed Iqbal
 # Created       :- 24-Jan-2018
-# Version       :- 0.1
+# Version       :- 0.2
 # License       :- free
 ###############################################################################
 
@@ -22,6 +22,7 @@ reciever_name = "Full Name Of Reciever"
 sender = 'name@domain.'
 receiver = 'name@domain.'
 company_logo = "http://url/Logo.png"
+mailheader = "Password Expiry Notification"
 
 ###############################################################################
 
@@ -60,7 +61,7 @@ def expiry_check():
 
 def email():
 
-    line = "This email is a gentle reminder for you to reset your account password which would expire in %s days (%s) " % (remdays.days, expiry)
+    line = "This email is a gentle reminder for you to reset your account password which would expire in %s days! " % (remdays.days)
     #Compose Email
     TEMPLATE = open("Email.html","r").read()
     msgRoot = MIMEMultipart('related')
@@ -70,11 +71,13 @@ def email():
 
     body = MIMEText(
            Environment().from_string(TEMPLATE).render(
-           logo = company_logo,
-           data = line,
+           header = emailheader,
+           machine = hostname,
            username = username,
+           logo = company_logo,
+           date = expiry.date(),
            dear = reciever_name,
-           machine = hostname
+           data = line           
     ), 'html')
     msgRoot.attach(body)
 
